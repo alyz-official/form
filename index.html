@@ -71,8 +71,8 @@
             box-sizing: border-box;
         }
 
-        .caixa input:active {
-            background: #6161c29c;
+        .caixa input:hover {
+            border: 2px solid white;
         }
 
         .caixa input::placeholder {
@@ -119,6 +119,11 @@
             font-weight: 600;
         }
 
+        .botao-login input:hover {
+            background-color: #4e85ec;
+            color: white;
+        }
+
         .registro {
             font-size: 14px;
             text-align: center;
@@ -141,14 +146,18 @@
 <body>
 
     <div class="formulario">
-        <form action="../primeiro/cadastro.php" autocomplete="off" method="post">
+        <form action="cadastro.php" autocomplete="off" method="post">
             <h1>Login</h1>
             <div class="caixa">
-                <input type="text" placeholder="username">
+                <input type="text" placeholder="username"
+                required minlength="3" maxlength="20"
+                >
                 <i class='bx bxs-user'></i>
             </div>
             <div class="caixa">
-                <input type="password" placeholder="password">
+                <input type="password" placeholder="password"
+                required minlength="8" maxlength="20"
+                >
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="lembrar-senha">
